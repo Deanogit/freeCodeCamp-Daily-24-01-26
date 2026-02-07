@@ -19,6 +19,12 @@ function getBingoLetter(n) {
     { score: 75, letter: 'O' },
   ];
 
-  const result = bingos.find((num) => num <= score);
-  console.log(result);
+  const result = bingos.find((bingo) => bingo.score >= n);
+  console.log(result.letter);
+  return result.letter;
 }
+
+getBingoLetter(54); // G
+getBingoLetter(25); // I
+getBingoLetter(38); // N
+getBingoLetter(11); // B
